@@ -23,6 +23,8 @@ public:
 	BLEAddress(esp_bd_addr_t address);
 	BLEAddress(std::string stringAddress);
 	bool           equals(BLEAddress otherAddress);
+        bool           operator==(BLEAddress other);
+        bool           operator!=(BLEAddress other);
 	esp_bd_addr_t* getNative();
 	std::string    toString();
 
